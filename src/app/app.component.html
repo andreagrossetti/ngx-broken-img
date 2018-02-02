@@ -1,0 +1,11 @@
+<ul class="card-list">
+  <li class="card" *ngFor="let card of cards">
+    <img class="card-img" [src]="card.previewImg" *ngIf="!card.ngx">
+    <img class="card-img" [src]="card.previewImg" *ngIf="card.ngx" [fixBrokenImage]="card.customPlaceholder">
+    <div class="card-body">
+      <h5 class="card-title">{{card.title}}</h5>
+      <p class="card-description">{{card.description}}</p>
+      <p class="card-update">{{card.update}}</p>
+    </div>
+  </li>
+</ul>

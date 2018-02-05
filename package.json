@@ -1,7 +1,12 @@
 {
   "name": "ngx-broken-img",
-  "version": "0.1.0",
+  "author": "Andrea Grossetti <andrea_grossetti@yahoo.it>",
+  "version": "0.1.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreagrossetti/ngx-broken-img.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +14,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "packagr": "ng-packagr -p ng-package.json && cd dist && npm pack"
+    "packagr": "ng-packagr -p ng-package.json && cd dist && npm pack",
+    "publish": "npm publish dist"
   },
   "dependencies": {
     "@angular/animations": "^5.2.0",

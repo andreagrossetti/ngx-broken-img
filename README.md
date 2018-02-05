@@ -1,3 +1,8 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreagrossetti/ngx-broken-img/master/src/assets/example.jpg" width="300">
+</div>
+
+
 # ngx-broken-img
 
 Angular 2+ directive to fix broken url in img.  

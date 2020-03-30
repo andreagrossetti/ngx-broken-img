@@ -4,7 +4,7 @@
 Angular 2+ directive to fix broken url in img.  
 If image url returns 404 a placeholder is used to fill img's src.
 <div align="center">
-  <img src="https://raw.githubusercontent.com/andreagrossetti/ngx-broken-img/master/src/assets/example.jpg" width="300">
+  <img src="https://raw.githubusercontent.com/andreagrossetti/ngx-broken-img/master/projects/ngx-broken-img/src/assets/example.jpg" width="300">
 </div>
 
 

@@ -16,7 +16,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build ngx-broken-img --prod",
-    "publish-script": "cd dist/ngx-broken-img && npm login && npm publish",
+    "deploy": "cd dist/ngx-broken-img && npm login && npm publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

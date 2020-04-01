@@ -7,11 +7,18 @@ If image url returns 404 a placeholder is used to fill img's src.
   <img src="https://raw.githubusercontent.com/andreagrossetti/ngx-broken-img/master/projects/ngx-broken-img/src/assets/example.jpg" width="300">
 </div>
 
+## Demo
+https://stackblitz.com/edit/ngx-broken-img
 
 ## Install
 
+### npm
 ```bash
 npm install ngx-broken-img --save
+```
+### yarn
+```bash
+yarn add ngx-broken-img
 ```
 
 ## Setup

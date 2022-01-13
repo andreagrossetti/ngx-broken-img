@@ -14,7 +14,7 @@
       "prefix": "ngx",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-broken-img/tsconfig.lib.json",
             "project": "projects/ngx-broken-img/ng-package.json"
@@ -31,18 +31,6 @@
             "main": "projects/ngx-broken-img/src/test.ts",
             "tsConfig": "projects/ngx-broken-img/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-broken-img/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-broken-img/tsconfig.lib.json",
-              "projects/ngx-broken-img/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -66,7 +54,6 @@
             "main": "projects/ngx-broken-img-showcase/src/main.ts",
             "polyfills": "projects/ngx-broken-img-showcase/src/polyfills.ts",
             "tsConfig": "projects/ngx-broken-img-showcase/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/ngx-broken-img-showcase/src/favicon.ico",
               "projects/ngx-broken-img-showcase/src/assets"
@@ -74,7 +61,13 @@
             "styles": [
               "projects/ngx-broken-img-showcase/src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -87,7 +80,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -105,7 +97,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -139,19 +132,6 @@
               "projects/ngx-broken-img-showcase/src/styles.sass"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-broken-img-showcase/tsconfig.app.json",
-              "projects/ngx-broken-img-showcase/tsconfig.spec.json",
-              "projects/ngx-broken-img-showcase/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {

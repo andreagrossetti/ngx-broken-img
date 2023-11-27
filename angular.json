@@ -47,24 +47,20 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/ngx-broken-img-showcase",
             "index": "projects/ngx-broken-img-showcase/src/index.html",
-            "main": "projects/ngx-broken-img-showcase/src/main.ts",
-            "polyfills": "projects/ngx-broken-img-showcase/src/polyfills.ts",
+            "browser": "projects/ngx-broken-img-showcase/src/main.ts",
+            "polyfills": ["projects/ngx-broken-img-showcase/src/polyfills.ts"],
             "tsConfig": "projects/ngx-broken-img-showcase/tsconfig.app.json",
             "assets": [
               "projects/ngx-broken-img-showcase/src/favicon.ico",
               "projects/ngx-broken-img-showcase/src/assets"
             ],
-            "styles": [
-              "projects/ngx-broken-img-showcase/src/styles.sass"
-            ],
+            "styles": ["projects/ngx-broken-img-showcase/src/styles.sass"],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
             "namedChunks": true
@@ -82,8 +78,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -103,18 +97,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-broken-img-showcase:build"
+            "buildTarget": "ngx-broken-img-showcase:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-broken-img-showcase:build:production"
+              "buildTarget": "ngx-broken-img-showcase:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-broken-img-showcase:build"
+            "buildTarget": "ngx-broken-img-showcase:build"
           }
         },
         "test": {
@@ -128,9 +122,7 @@
               "projects/ngx-broken-img-showcase/src/favicon.ico",
               "projects/ngx-broken-img-showcase/src/assets"
             ],
-            "styles": [
-              "projects/ngx-broken-img-showcase/src/styles.sass"
-            ],
+            "styles": ["projects/ngx-broken-img-showcase/src/styles.sass"],
             "scripts": []
           }
         },
@@ -147,6 +139,6 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-broken-img"
+    }
+  }
 }

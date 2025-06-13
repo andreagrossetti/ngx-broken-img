@@ -1,7 +1,8 @@
 import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[ngxBrokenImg]'
+    selector: '[ngxBrokenImg]',
+    standalone: false
 })
 
 export class NgxBrokenImgDirective {

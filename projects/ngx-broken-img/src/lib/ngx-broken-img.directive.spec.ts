@@ -4,8 +4,9 @@ import { By } from '@angular/platform-browser';
 import { NgxBrokenImgDirective } from './ngx-broken-img.directive';
 
 @Component({
-  template: `
+    template: `
     <img class="card-img" src="http://www.sdf.com" ngxBrokenImg />`,
+    standalone: false
 })
 class TestComponent {}
 

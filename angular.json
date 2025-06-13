@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "yarn",
+    "packageManager": "pnpm",
     "analytics": "0801c46c-1cf8-43e8-a250-680a760b5903"
   },
   "newProjectRoot": "projects",
@@ -52,13 +52,17 @@
             "outputPath": "dist/ngx-broken-img-showcase",
             "index": "projects/ngx-broken-img-showcase/src/index.html",
             "browser": "projects/ngx-broken-img-showcase/src/main.ts",
-            "polyfills": ["projects/ngx-broken-img-showcase/src/polyfills.ts"],
+            "polyfills": [
+              "projects/ngx-broken-img-showcase/src/polyfills.ts"
+            ],
             "tsConfig": "projects/ngx-broken-img-showcase/tsconfig.app.json",
             "assets": [
               "projects/ngx-broken-img-showcase/src/favicon.ico",
               "projects/ngx-broken-img-showcase/src/assets"
             ],
-            "styles": ["projects/ngx-broken-img-showcase/src/styles.sass"],
+            "styles": [
+              "projects/ngx-broken-img-showcase/src/styles.sass"
+            ],
             "scripts": [],
             "extractLicenses": false,
             "sourceMap": true,
@@ -122,7 +126,9 @@
               "projects/ngx-broken-img-showcase/src/favicon.ico",
               "projects/ngx-broken-img-showcase/src/assets"
             ],
-            "styles": ["projects/ngx-broken-img-showcase/src/styles.sass"],
+            "styles": [
+              "projects/ngx-broken-img-showcase/src/styles.sass"
+            ],
             "scripts": []
           }
         },
@@ -139,6 +145,32 @@
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
+    },
+    "@schematics/angular:directive": {
+      "type": "directive"
+    },
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
     }
   }
 }

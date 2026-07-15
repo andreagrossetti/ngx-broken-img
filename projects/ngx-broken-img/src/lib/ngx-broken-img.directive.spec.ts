@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { NgxBrokenImgDirective } from './ngx-broken-img.directive';
 
 @Component({
     template: `
     <img class="card-img" src="http://www.sdf.com" ngxBrokenImg />`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestComponent {}
 
 describe('NgxBrokenImgDirective', () => {
-  let elements;
-  let fixture;
+  let elements: DebugElement[];
+  let fixture: ComponentFixture<TestComponent>;
   beforeEach(() => {
     fixture = TestBed.configureTestingModule({
       declarations: [NgxBrokenImgDirective, TestComponent],

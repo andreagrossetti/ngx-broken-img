@@ -26,11 +26,10 @@ describe('NgxBrokenImgDirective', () => {
     expect(directive).toBeTruthy();
   });
 
-  it('broken image should be replaced with placeholder', (done) => {
-    setTimeout(() => {
-      const src = elements[0].nativeElement.src;
-      expect(src).toContain('data:image');
-      done();
-    }, 500);
+  it('broken image should be replaced with placeholder', () => {
+    const img = elements[0].nativeElement as HTMLImageElement;
+    img.dispatchEvent(new Event('error'));
+    fixture.detectChanges();
+    expect(img.src).toContain('data:image');
   });
 });

@@ -1,7 +1,7 @@
 {
   "name": "ngx-broken-img",
   "author": "Andrea Grossetti <andrea_grossetti@yahoo.it>",
-  "version": "21.0.0",
+  "version": "22.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "tslib": "^2.6.2"
   },
   "peerDependencies": {
-    "@angular/common": "^21.0.0",
-    "@angular/core": "^21.0.0"
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0"
   }
 }
